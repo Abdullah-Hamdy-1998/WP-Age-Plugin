@@ -2,7 +2,7 @@
 
 class AdminView
 {
-    public function render_age_filed($user)
+    public function render_age_field()
     {
 ?>
         <table class="form-table">
