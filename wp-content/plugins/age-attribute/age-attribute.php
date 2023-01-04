@@ -21,9 +21,9 @@ if (!function_exists('age_attribute_setup')) :
     function age_attribute_setup()
     {
 
-        require_once AGE_ATTRIBUTE_DIR . 'src/controller.php';
-        require_once AGE_ATTRIBUTE_DIR . 'src/view.php';
-        require_once AGE_ATTRIBUTE_DIR . 'src/model.php';
+        require_once AGE_ATTRIBUTE_DIR . 'src/AdminController.php';
+        require_once AGE_ATTRIBUTE_DIR . 'src/AdminView.php';
+        require_once AGE_ATTRIBUTE_DIR . 'src/UserModel.php';
 
         new AdminController();
     }
