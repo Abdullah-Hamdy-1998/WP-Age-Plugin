@@ -20,20 +20,20 @@ class AdminController
         add_action('personal_options_update', array($this, 'save_age_field'));
     }
 
-    public function add_age_field($user_id)
+    public function add_age_field($user)
     {
-        if (!current_user_can('edit_user', $user_id))
+        if (!current_user_can('edit_user', $user))
             return false;
 
-        $this->view->render_age_field();
+        $this->view->render_age_field($user);
     }
 
-    public function save_age_field($user_id)
+    public function save_age_field($user)
     {
 
-        if (!current_user_can('edit_user', $user_id))
+        if (!current_user_can('edit_user', $user))
             return false;
 
-        $this->model->update_age($user_id, $_POST['age']);
+        $this->model->update_age($user, $_POST['age']);
     }
 }
